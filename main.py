@@ -12,21 +12,21 @@ class Coche(Vehiculo):
       self.velocidad = velocidad
       self.cilindrada = cilindrada
   def __str__(self):
-      return Vehiculo.__str__(self) + f", {self.velocidad} km/h, {self.cilindrada} cc"
+      return super().__str__() + f", {self.velocidad} km/h, {self.cilindrada} cc"
 
 class Bicicleta(Vehiculo): 
   def __init__(self,color,ruedas,tipo): 
     super().__init__(color,ruedas) 
     self.tipo=tipo 
   def __str__(self): 
-    return Vehiculo.__str__(self) + f" , Tipo : {self.tipo}" 
+    return super().__str__() + f" , Tipo : {self.tipo}" 
 
 class Camioneta(Coche): 
   def __init__(self,color,ruedas,velocidad,cilindrada,carga): 
     super().__init__(color,ruedas,velocidad,cilindrada)
     self.carga=carga 
   def __str__(self): 
-    return Coche.__str__(self)+ f" , carga : {self.carga} Kgms" 
+    return super().__str__()+ f" , carga : {self.carga} Kgms" 
 
 class Motocicleta(Bicicleta): 
   def __init__(self,color,ruedas,tipo,velocidad,cilindrada): 
@@ -34,7 +34,7 @@ class Motocicleta(Bicicleta):
     self.velocidad=velocidad
     self.cilindrada=cilindrada
   def __str__(self): 
-    return Bicicleta.__str__(self) + f", Velocidad : {self.velocidad} , Cilindrada : {self.cilindrada}"
+    return super().__str__() + f", Velocidad : {self.velocidad} , Cilindrada : {self.cilindrada}"
 
 
 combi=Coche("Verde",4,90,1800)
