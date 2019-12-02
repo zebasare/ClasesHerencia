@@ -51,10 +51,10 @@ def catalogar(vehiculos,ruedas=None):
   if ruedas is None:  
         for i in vehiculos: 
             print(type(i).__name__,i)
-    
   elif ruedas is not None: 
       for i in vehiculos:
         if i.ruedas==ruedas: 
+          print(type(i).__name__,i)
           contador+=1
         
   
@@ -65,7 +65,7 @@ def catalogar(vehiculos,ruedas=None):
     
      
 
-catalogar(lista,3)
+catalogar(lista)
 
 
 
